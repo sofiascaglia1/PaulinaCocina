@@ -1,0 +1,63 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    background-color: #F15454;
+    height: 105px;
+    line-height: 105px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-family: 'montserrat', sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+}
+
+.hero {
+    background: #93C6D2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 60px 0 0 60px;
+}
+
+p {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+a {
+    display: inline-block;
+    background: #D22929;
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cta {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.boton {
+    font-family: 'montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.sub-boton {
+    font-size: 24px;
+}
+
+.hero img {
+    width: 120%;
+    max-width: none;
+}
