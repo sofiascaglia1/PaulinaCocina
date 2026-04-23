@@ -1,37 +1,93 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    width: 100%;
+}
+@font-face {
+    font-family: 'Montserrat'; /* El nombre que vos elijas */
+    src: url('fuentes/Montserrat-VariableFont_wght.ttf/');}
+
+  @font-face {  font-family: "Nunito";
+    src: url(fuentes/Nunito-Italic-VariableFont_wght.ttf);}
+
+  @font-face {  font-family: "Book Antiqua";
+    src: url(fuentes/bookantiqua.ttf);
+} 
+@media (min-width: 1200px){
+
+
 body {
     font-family: 'Nunito', sans-serif;
+   
 }
 
 header {
     background-color: #F15454;
-    height: 105px;
+    height: 10%;
+    padding: 20px auto;
     line-height: 105px;
     color: white;
     text-align: center;
     font-weight: 700;
     letter-spacing: 2px;
-}
+    align-content: center;}
 
-h1 {
-    font-family: 'montserrat', sans-serif;
-    font-size: 96px;
+    header img {
+        height: 50px;  
+    width: auto;
+}
+    
+
+     /*SECCION PORTADA */
+
+.hero h1 { 
+    font-family: 'Montserrat';
+    font-size: 64px;
     font-weight: 700;
 }
 
-.hero {
-    background: #93C6D2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 60px 0 0 60px;
+
+
+.textoresalta{
+color: #F15454;
 }
 
-p {
-    font-size: 32px;
+
+.hero {
+    background: #93C6D2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; /* Mantiene el texto centrado verticalmente */
+    padding: 60px 0px 80px 60px;
+} 
+.hero > div:last-child {
+    align-self: flex-end; /* Empuja solo este bloque hacia abajo */
+    line-height: 0;       /* Elimina espacios fantasmas debajo de la imagen */
+    justify-content: flex-end; /* 👉 la empuja a la derecha */
+    align-items: flex-end;
+}
+
+.hero img {
+    height: auto;
+    width: 100%;
+    display: block; /* Ayuda a que pegue contra el borde inferior */
+}
+.hero p {
+    font-size: 23px;
     margin: 20px 0;
+    padding: 0;
 }
 
 a {
+   
     display: inline-block;
     background: #D22929;
     color: white;
@@ -39,25 +95,458 @@ a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 40px
 }
 
 .cta {
     margin-left: 40px;
     margin-right: 40px;
+
 }
 
 .boton {
     font-family: 'montserrat', sans-serif;
     font-size: 42px;
     font-weight: 700;
+    margin-top: 60px;
 }
 
 .sub-boton {
     font-size: 24px;
+  
 }
 
-.hero img {
-    width: 120%;
-    max-width: none;
+
+ /*SECCION DE QUE TRATAE EL EVENTO */
+
+.divisor-rojo {
+    background-color: #ff4d4d;
+    width: 100%;               /* Que ocupe todo el ancho */
+    padding: 20px 0;           /* Espacio arriba y abajo del texto */
+    text-align: center;        /* Centra el texto */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave abajo */
+  }
+
+  .divisor-rojo h2 {
+    color: white;              /* Letra blanca */
+    font-family: "Montserrat";
+    font-size: 64px;
+    margin: 0;
+    text-transform: uppercase; /* Todo en mayúsculas */
+    letter-spacing: 2px;     
+  }
+  
+ .infoevento {
+        background-image: url('imagenes/fondocebollas.png'); 
+        padding-bottom: 80px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fechayhora {
+       grid-column: span 2;
+        text-align: center;
+        font-weight: bold;
+        font-family: Nunito;
+        font-size: 32px
+     
+    }
+
+   .cards { 
+        background-color: #f2efee;
+        width: 80%; /* Ajusta según tu Figma */
+        max-width: 1100px;
+        margin: 60px auto; /* 60px es la separación con el título rojo */
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        padding: 40px;
+        position: relative;
+    }
+
+
+    /* cada cuadrito y cada imagen */
+    .card {
+        padding: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card img {
+        height: 200px; 
+        margin-bottom: 20px;
+    }
+
+    .card h3 {
+        font-size: 24px
+
+       
+    }
+
+ /* --- CONFIGURACIÓN DE BORDES AMARILLOS --- */
+    
+    /* Línea vertical: Se la damos a la card 1 y 3 (las de la izquierda) */
+    /* Como el párrafo es el elemento 1, las cards son el 2, 3, 4 y 5 */
+    .card:nth-child(2), .card:nth-child(4) {
+        border-right: 2px solid #eec05b;
+    }
+
+    /* Línea horizontal: Se la damos a la card 1 y 2 (las de arriba) */
+    /* En el código son el elemento 2 y 3 */
+    .card:nth-child(2), .card:nth-child(3) {
+        border-bottom: 2px solid #eec05b;
+    }
+
+    /* Ajuste de imágenes y textos */
+    .card img {
+        height: 180px;
+        margin-bottom: 20px;
+    }
+
+    .card h3 {
+        margin: 15px 0;
+        font-size: 24px
+    }
+
+
+
+
+     /*--------------------------------SECCION DE QUE VAMOS A COCINAR ------------------*/
+.seccion-comidas {
+        background-color: #7fb3c1;
+        overflow: hidden;
+    }
+
+  .contenedor-carrusel {
+        position: relative; /* Clave para mover las flechas */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px; /* Ajusta según tu diseño */
+        margin: 50px auto;
+        padding: 150px 80px; /* Creamos un colchón de espacio para las flechas */
+    }
+
+    .ventana-carrusel {
+        width: 100%;
+        overflow: visible; /* Para que se vean las de los costados */
+        display: flex;
+        justify-content: center;
+    }
+
+    .riel-tarjetas {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tarjeta {
+        background-color: white;
+        border-radius: 45px;
+        min-width: 320px; 
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        overflow: hidden;
+        transition: all 0.5s ease;
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+
+    /* La clase que pondrá el JS */
+    .tarjeta.activa {
+        opacity: 1;
+        transform: scale(1.1);
+        z-index: 5;
+    }
+
+    /* Flechas (Tus estilos de dibujo) */
+    .flecha {
+        background-color: #f05454;
+        border: none;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+         padding: 0;              /* 👈 clave */
+  aspect-ratio: 1 / 1;     /* 👈 asegura círculo perfecto */
+  flex-shrink: 0; 
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .flecha::after {
+        content: '';
+        width: 14px; height: 14px;
+        border-top: 4px solid white;
+        border-right: 4px solid white;
+    }
+
+    .flecha.izquierda::after { transform: rotate(-135deg); margin-left: 5px; }
+    .flecha.derecha::after { transform: rotate(45deg); margin-right: 5px; }
+    
+    .tarjeta img { width: 100%; height: 280px; object-fit: cover; border-bottom: 5px solid #f05454; }
+    .info-tarjeta { padding: 25px; text-align: center; }
+    .info-tarjeta h3 { color: #f05454; margin-bottom: 10px; } }
+
+
+   /*--------------------------------SECCION DEl contador ------------------*/
+
+
+    .seccion-contador {
+      background-image: url(imagenes/fondomanchas.png);
+        padding-bottom: 80px;
+        text-align: center;
+    }
+
+    .contenedor-flexible {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-top: 50px;
+    }
+
+    /* --- ESTILO DE LOS AJOS --- */
+    .bloque-ajos {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        
+    }
+
+    .ajo-item {
+        position: relative; /* Para que el texto se mueva adentro del ajo */
+        width: 247px;
+    }
+
+    .ajo-item img {
+        width: 100%;
+    }
+
+    .texto-ajo {
+        position: absolute;
+        top: 65%; /* Ajusta esto para centrar el número en la panza del ajo */
+        left: 47%;
+        transform: translate(-50%, -50%);
+        color: #f05454; /* Rojo */
+        font-family: 'Arial Black', sans-serif;
+    }
+
+    .texto-ajo span {
+        font-size: 90px;
+        display: block;
+        line-height: 1;
+    }
+
+    .texto-ajo p {
+        font-size: 1rem;
+        margin: 0;
+        font-family: serif; 
+    }
+
+    /* --- ESTILO DEL MAPA --- */
+    .contenedor-mapa {
+        border: 10px solid #a3d0d9; /* Borde celeste clarito */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        line-height: 0; /* Quita espacio extra abajo */
+    }
+
+    .contenedor-mapa iframe {
+        width: 500px; /* Ancho en PC */
+        height: 500px; }
+
+
+
+
+/*---------------------- TESTIMONIOSSSSSSSSSSSSSSSSSSSSSS---------------------------- */
+
+    .testimonioss {
+        background-color: #f2efee; 
+        padding-bottom: 100px;
+        text-align: center;
+    }
+
+    .contenedor-postits {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+        margin-top: 80px;
+        padding: 0 50px;
+    }
+
+    .postit {
+        background-color: #8dbcc9;
+        width: 500px;
+        height: 500px;
+        padding: 40px;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.1); /* Sombra */
+        transition: transform 0.3s ease;
+    }
+
+    /* --- Rotaciones d  cada uno --- */
+    .postit:nth-child(1) {
+        transform: rotate(-3deg);
+        margin-top: 40px;
+    }
+
+    .postit:nth-child(2) {
+        transform: rotate(2deg);
+    }
+
+    .postit:nth-child(3) {
+        transform: rotate(-2deg);
+        margin-top: 60px;
+    }
+
+    /* Efecto al pasar el mouse */
+    .postit:hover {
+        transform: rotate(0deg) scale(1.05);
+        z-index: 10;
+    }
+
+    /* --- TEXTO  DEL POST-IT --- */
+    .postit blockquote p {
+        font-size: 150%;
+        line-height: 2;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .postit cite {
+        color: #f05454; /* Rojo para el nombre */
+        font-weight: bold;
+        font-style: normal;
+        display: block;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 20px
+    }
+ .final{
+        background-color: #FEA904;
+        margin: 0px;
+        border: 0px;
+        padding: 10px 0 0 0; 
+    }
+
+
+.contenedor-columnas {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center; /* Centra el formulario verticalmente respecto a la imagen */
+    justify-content: space-between;
+}
+
+.columna-izquierda {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.columna-derecha {
+    flex: 1;
+    padding-left: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.columna-derecha img {
+    max-width: 200%;
+    padding-left: 100px; 
+    display: block; /* Quita espacios raros abajo de la imagen */
+}
+
+/* --- ESTILOS DEL FORMULARIO --- */
+
+.titulo-final {
+    font-family: 'Book Antiqua', serif; /* O la que prefieras */
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.subtitulo-final {
+    font-family: 'Montserrat', sans-serif;
+    color: #D22929; /* Tu rojo */
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.formulario-final {
+    display: flex;
+    flex-direction: column; /* Apila los inputs uno abajo del otro */
+    gap: 20px; /* Espacio entre campos */
+    max-width: 450px; /* Para que no sean infinitamente largos */
+}
+
+.formulario-final input {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.boton-enviar {
+    background-color: #D22929;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.boton-enviar:hover {
+    background-color: #a51f1f;
+}
+
+footer{
+        background-color: #D22929;
+       width: 100%;
+        padding: 80px 0;
+       
+    }
+ footer img{
+    display: inline-block;
+ }
+
+ .footer-contenido {
+    margin: 0 auto;    /* Centra el contenedor */
+    display: flex;
+    justify-content: space-between; /* Texto a la izq, logos a la derecha */
+    align-items: center; /* Los centra verticalmente entre sí */
+    padding: 0 40px;   /* Un margen interno para que no toquen el borde */
+}
+
+.footer-links {
+    display: block;
+    gap: 100px; /* Espacio entre las políticas */
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 15px; /* Espacio entre logos */
+}
+
+.footer-redes img {
+    height: 50px; /* Tamaño de los iconos */
+    width: auto;
+    filter: brightness(0) invert(1); /* Opcional: pone los logos en blanco si son oscuros */
+}
+.footer-redes img:hover {
+    transform: scale(1.2); /* Efecto de agrandado al pasar el mouse */
 }
