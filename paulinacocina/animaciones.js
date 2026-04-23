@@ -8,21 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let indice = 1; 
 
     function deslizar() {
-        const anchoTarjeta = 320; 
-        const gap = 30; 
-        const desplazamiento = -((indice - 1) * (anchoTarjeta + gap));
-        
-        if (riel) {
-            riel.style.transform = `translateX(${desplazamiento}px)`;
-        }
+        const tarjeta = tarjetas[0];
+    const anchoTarjeta = tarjeta.offsetWidth;
 
-        tarjetas.forEach((t, i) => {
-            if (i === indice) {
-                t.classList.add('activa');
-            } else {
-                t.classList.remove('activa');
-            }
-        });
+    const estiloRiel = window.getComputedStyle(riel);
+    const gap = parseInt(estiloRiel.gap) || 0;
+
+    const desplazamiento = -((indice - 1) * (anchoTarjeta + gap));
+
+    if (riel) {
+        riel.style.transform = `translateX(${desplazamiento}px)`;
+    }
+
+    tarjetas.forEach((t, i) => {
+        t.classList.toggle('activa', i === indice);
+    });
     }
 
     if (btnDer) {

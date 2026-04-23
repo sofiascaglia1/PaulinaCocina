@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <script src="animaciones.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -26,14 +27,22 @@
     <section class="hero" id="inicio">
         <div>
             <h1>¿OTRA VEZ <span class="textoresalta"> SIN <br>
-                SABER </span>QUE COCINAR <br> 
+                    SABER </span>QUE COCINAR <br>
                 Y <span class="textoresalta"> SIN TIEMPO?</span>
             </h1>
-            <p>
+            <p class="texto-pc">
                 Aprendé a cocinar sin estrés y resolver la cena fácil en <br>
                 30 minutos en un encuentro en La Rural con Paulina. <br>
                 Sí, aunque no tengas idea.
             </p>
+            <p class="texto-mobile">
+                Aprendé a cocinar sin estrés y resolver<br>
+                la cena fácil en 30 minutos en un<br>
+                encuentro en La Rural con Paulina. Sí,<br>
+                aunque no tengas idea.
+            </p>
+
+
             <div class="cta">
                 <a href="#formulario" class="boton">¡ME ANOTO!</a>
                 <p class="sub-boton">Reservá tu lugar ya y dejá que te <br>
@@ -216,15 +225,15 @@
                 <p class="subtitulo-final">¡Anotate para no quedarte sin tu entrada!</p>
 
                 <form class="formulario-final">
-                  <input type="text" placeholder="Nombre" required>
-<input type="text" placeholder="Apellido" required>
-<input type="email" placeholder="Correo electrónico" required>
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Apellido" required>
+                    <input type="email" placeholder="Correo electrónico" required>
                     <button type="submit" class="boton-enviar">ENVIAR</button>
                 </form>
             </div>
 
-    
-   
+
+
 
 
 
@@ -252,20 +261,20 @@
             </div>
         </div>
     </footer>
-   
-<div id="modalExito" class="modal-overlay">
-    <div class="modal-contenido">
-       
-        <div class="cuerpo-modal">
-            <div class="circulo-check">
-                <div class="check-icono"></div>
+
+    <div id="modalExito" class="modal-overlay">
+        <div class="modal-contenido">
+
+            <div class="cuerpo-modal">
+                <div class="circulo-check">
+                    <div class="check-icono"></div>
+                </div>
+                <h2 id="mensajeExito">¡LISTO, <span id="userName"></span>! YA ESTÁS ADENTRO!</h2>
+                <p>Revisá tu mail que te mandamos los detalles <br> ¡No te pierdas de esta experiencia!</p>
+                <button id="cerrarModal" class="boton-volver" type="button">Volver al inicio</button>
             </div>
-            <h2 id="mensajeExito">¡LISTO, <span id="userName"></span>! YA ESTÁS ADENTRO!</h2>
-            <p>Revisá tu mail que te mandamos los detalles <br> ¡No te pierdas de esta experiencia!</p>
-      <button id="cerrarModal" class="boton-volver" type="button">Volver al inicio</button>
         </div>
     </div>
-</div>
 </body>
 
 </html>
