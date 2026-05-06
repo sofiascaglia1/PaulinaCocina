@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     overflow-x: hidden; /* Evita el scroll horizontal */
     width: 100%;
 }
@@ -73,13 +73,15 @@ color: #F15454;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center; /* Mantiene el texto centrado verticalmente */
-    padding: 60px 0px 0px 60px;
+    padding: 40px 0px 0px 60px;
 } 
 .hero > div:last-child {
     align-self: flex-end; /* Empuja solo este bloque hacia abajo */
     line-height: 0;       /* Elimina espacios fantasmas debajo de la imagen */
     justify-content: flex-end; /* 👉 la empuja a la derecha */
     align-items: flex-end;
+
+
 }
 
 .hero img {
@@ -91,10 +93,17 @@ color: #F15454;
     font-size: 23px;
     margin: 20px 0;
     padding: 0;
+
 }
 .texto-mobile {
     display: none;
+    font-weight: 650;
 }
+
+.texto-pc {
+    font-weight: 650;
+}
+
 a {
    
     display: inline-block;
@@ -108,9 +117,10 @@ a {
 }
 
 .cta {
-    margin-left: 40px;
-    margin-right: 40px;
-
+    margin-left: 0;   /* Cambiado de 40px a 0 */
+    margin-right: 0;  /* Cambiado de 40px a 0 */
+    text-align: left; /* Asegura que el contenido interno se alinee a la izquierda */
+    transform: translateY(-40px); 
 }
 
 .boton {
@@ -173,7 +183,9 @@ a {
         padding: 40px;
         position: relative;
     }
-
+.resaltado {
+    color: #eec05b; /* tu rojo */
+}
 
     /* cada cuadrito y cada imagen */
     .card {
@@ -190,8 +202,8 @@ a {
     }
 
     .card h3 {
-        font-size: 24px
-
+        font-size: 24px;
+     font-family: 'Book Antiqua', serif;
        
     }
 
@@ -217,7 +229,7 @@ a {
 
     .card h3 {
         margin: 15px 0;
-        font-size: 24px
+        font-size: 24px;
     }
 
 
@@ -279,8 +291,8 @@ a {
         border-radius: 50%;
         width: 90px;
         height: 90px;
-         padding: 0;              /* 👈 clave */
-  aspect-ratio: 1 / 1;     /* 👈 asegura círculo perfecto */
+         padding: 0;             
+  aspect-ratio: 1 / 1;     
   flex-shrink: 0; 
         cursor: pointer;
         position: relative;
@@ -300,9 +312,21 @@ a {
     .flecha.izquierda::after { transform: rotate(-135deg); margin-left: 5px; }
     .flecha.derecha::after { transform: rotate(45deg); margin-right: 5px; }
     
+    .negrita {
+font-weight: 700;
+
+    }
     .tarjeta img { width: 100%; height: 280px; object-fit: cover; border-bottom: 5px solid #f05454; }
-    .info-tarjeta { padding: 25px; text-align: center; }
-    .info-tarjeta h3 { color: #f05454; margin-bottom: 10px; } 
+    .info-tarjeta { 
+        padding: 25px; 
+        text-align: center;
+     }
+    .info-tarjeta h3 { 
+        color: #f05454; 
+        margin-bottom: 10px;
+     font-family: 'Book Antiqua', serif;
+    } 
+
 
 
    /*--------------------------------SECCION DEl contador ------------------*/
@@ -487,6 +511,7 @@ a {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 40px;
+     
 }
 
 .formulario-final {
@@ -522,16 +547,24 @@ a {
 }
 
 footer{
-        background-color: #D22929;
+        background-color: #f05454;
        width: 100%;
         padding: 80px 0;
        
     }
+
+    .footer-redes a {
+    background: transparent;
+    padding: 15;
+    margin-top: 0;
+    border-radius: 0;
+}
  footer img{
     display: inline-block;
  }
 
  .footer-contenido {
+   
     margin: 0 auto;    /* Centra el contenedor */
     display: flex;
     justify-content: space-between; /* Texto a la izq, logos a la derecha */
@@ -541,10 +574,11 @@ footer{
 
 .footer-links {
     display: block;
+
     gap: 100px; /* Espacio entre las políticas */
     color: white;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 20px;
 }
 
 .footer-redes {
@@ -671,7 +705,7 @@ color: #a51f1f;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 40px 20px;
     padding-bottom: 250px;
     gap: 15px;
 }
@@ -687,6 +721,7 @@ color: #a51f1f;
     width: 150vw;     /* 👈 tamaño relativo a la pantalla */
     max-width: none;
     height: auto;
+     pointer-events: none;
 }
 
 .hero p {
@@ -699,21 +734,26 @@ color: #a51f1f;
         display: none;
     }
 
-    .texto-mobile {
-        display: block;
-        font-size: 16px;
-        line-height: 1.4;
-    }
+  .texto-mobile {
+    display: block;
+    font-size: 16px;
+    line-height: 1.3;
+      max-width: 320px; /* 👈 controla el ancho del texto */
+}
 
 a {
     padding: 5px 10px;
 }
 
 .cta {
-    margin: 0px;
-
+    margin-left: 0;      /* Elimina márgenes */
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Cambiado de center a flex-start */
+    text-align: left;        /* Cambiado de center a left */
+    transform: translateX(0); /* Cambiado de -50px a 0 para que no se salga de la pantalla */
 }
-
 .boton {
     font-size: 24px;
     font-weight: 700;
@@ -769,8 +809,12 @@ a {
     padding: 15px; /* antes 25px */
 }
 
+.info-tarjeta p {
+    font-size: 14px;
+}
+
 .info-tarjeta h3 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 
@@ -935,6 +979,7 @@ a {
         color: #333;
         margin-bottom: 20px;
         text-align: left;
+        font-weight: 600;
     }
 
     .postit cite {
@@ -943,11 +988,11 @@ a {
 
 .final {
         background-color: #FEA904 !important; 
-        padding: 40px 0 0 0 !important;
+        padding: 5px 0 0 0 !important;
         position: relative; 
         overflow: hidden;
     }
-
+ 
     .contenedor-columnas {
         display: block !important; 
         width: 100% !important;
@@ -967,19 +1012,22 @@ a {
     .titulo-final {
         font-size: 35px !important;
         line-height: 1.1 !important;
-        margin-bottom: 5px !important;
-        width: 70%; /* Para que no choque con la cara de Paulina arriba */
+        margin-bottom: 15px !important;
+            white-space: nowrap;
+            text-align: center;
+            margin-top: 20px;
     }
 
     .subtitulo-final {
         font-size: 18px !important;
         color: #D22929 !important;
         margin-bottom: 20px !important;
-        width: 60%;
+        width: 100%;
+          text-align: center;
     }
 
     .formulario-final {
-        width: 60% !important; 
+        width: 100% !important; 
     }
 
     .formulario-final input {
@@ -997,25 +1045,36 @@ a {
         font-size: 18px !important;
     }
 
-    /* COLUMNA DE PAULINA (LA CLAVE) */
-    .columna-derecha {
-        position: absolute !important;
-        bottom: 0 !important;
-        right: -20px !important; /* La pegamos al borde derecho */
-        width: 65% !important; /* Tamaño de Paulina */
-        z-index: 1; /* Queda un poquito atrás del form pero se ve entera */
-        pointer-events: none; /* Para que no moleste si querés clickear el form */
-    }
 
-    .columna-derecha img {
-       position: absolute;
-    bottom: -30px;   /* 👈 baja la imagen */
-    right: -30vw;    /* 👈 se va fuera de la pantalla */
-    width: 100vw;     /* 👈 tamaño relativo a la pantalla */
-    max-width: none;
+
+    /* COLUMNA DE PAULINA CELU (LA CLAVE) */
+   /* COLUMNA DE PAULINA (LA CLAVE) */
+.columna-derecha {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    width: 100% !important;
+    height: 300px; /* 👈 ventana de recorte */
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    overflow: hidden; /* 👈 recorta */
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+.columna-derecha img {
+    width: 100%;
+    max-width: 420px;
     height: auto;
-    }
 
+    transform: translate( -70px, 20% ); /* 👈 (VALOR_X, SUBE la imagen para cortar abajo */
+}
 
 
 
@@ -1077,7 +1136,7 @@ footer {
     .footer-redes {
         display: flex !important;
         justify-content: center !important;
-        gap: 25px !important; 
+        gap: 5px !important; 
         margin-bottom: 10px !important;
     }
 
