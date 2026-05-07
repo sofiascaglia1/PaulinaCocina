@@ -1075,7 +1075,7 @@ a {
     width: 100%;
     max-width: 420px;
     height: auto;
-    transform: translate( -70px, 39% ); /* 👈 (VALOR_X, SUBE la imagen para cortar abajo */
+    transform: translate( -70px, 38% ); /* 👈 (VALOR_X, SUBE la imagen para cortar abajo */
 }
 
 
