@@ -706,7 +706,7 @@ color: #a51f1f;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 40px 10px;
     padding-bottom: 250px;
     gap: 15px;
 }
