@@ -76,7 +76,7 @@ color: #F15454;
 .hero > div:last-child {
     align-self: flex-end; /* Empuja solo este bloque hacia abajo */
     line-height: 0;       /* Elimina espacios fantasmas debajo de la imagen */
-    justify-content: flex-end; /* 👉 la empuja a la derecha */
+    justify-content: flex-end; 
     align-items: flex-end;
 
 
@@ -87,6 +87,15 @@ color: #F15454;
     width: 120%;
     display: block; /* Ayuda a que pegue contra el borde inferior */
 }
+
+.solo-mobile {
+    display: none;
+}
+
+.solo-desktop {
+    display: block;
+}
+
 .hero p {
     font-size: 23px;
     margin: 20px 0;
@@ -135,7 +144,7 @@ a {
 }
 
 
- /*SECCION DE QUE TRATAE EL EVENTO */
+ /*SECCION DE QUE TRATA EL EVENTO */
 
 .divisor-rojo {
     background-color: #ff4d4d;
@@ -367,7 +376,8 @@ font-weight: 700;
         left: 47%;
         transform: translate(-50%, -50%);
         color: #f05454; /* Rojo */
-        font-family: 'Arial Black', sans-serif  !important;
+        font-family: 'Montserrat', sans-serif  !important;
+        font-weight: 800;
 
     }
 
@@ -375,8 +385,7 @@ font-weight: 700;
         font-size: 90px;
         display: block;
         line-height: 1;
-
-        font-family: 'Arial Black', sans-serif !important;
+    
     }
 
     .texto-ajo p {
@@ -706,9 +715,9 @@ color: #a51f1f;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 40px 10px;
-    padding-bottom: 250px;
+    padding: 40px 15px 250px 15px;
     gap: 15px;
+     overflow: hidden;
 }
 .hero h1 {
     font-family: 'Montserrat';
@@ -717,13 +726,23 @@ color: #a51f1f;
 }
 .hero img {
    position: absolute;
-    bottom: 0px;   /* 👈 baja la imagen */
-    right: -50vw;    /* 👈 se va fuera de la pantalla */
-    width: 150vw;     /* 👈 tamaño relativo a la pantalla */
+    bottom: 0px;   
+    right: -50vw;    
+    width: 150vw;     
     max-width: none;
     height: auto;
      pointer-events: none;
+
+     
 }
+
+.solo-mobile {
+        display: block;
+    }
+
+ .solo-desktop {
+        display: none;
+    }
 
 .hero p {
     font-size: 18px;
@@ -739,7 +758,7 @@ color: #a51f1f;
     display: block;
     font-size: 16px;
     line-height: 1.3;
-      max-width: 320px; /* 👈 controla el ancho del texto */
+      max-width: 320px; 
 }
 
 a {
@@ -747,13 +766,13 @@ a {
 }
 
 .cta {
-    margin-left: 0;      /* Elimina márgenes */
+    margin-left: 0;     
     margin-right: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Cambiado de center a flex-start */
-    text-align: left;        /* Cambiado de center a left */
-    transform: translateX(0); /* Cambiado de -50px a 0 para que no se salga de la pantalla */
+    align-items: flex-start; 
+    text-align: left;        
+    transform: translateX(0); 
 }
 .boton {
     font-size: 24px;
@@ -769,19 +788,19 @@ a {
 
 
 .contenedor-carrusel {
-    margin: 30px auto;     /* antes 50px */
-    padding: 60px 20px;    /* antes 150px 80px 😵 */
+    margin: 30px auto;     
+    padding: 60px 20px;    
 }
 
 .tarjeta {
-    min-width: 220px;   /* antes 320px */
-    border-radius: 25px; /* opcional, más proporcionado */
+    min-width: 220px;   
+    border-radius: 25px; 
 }
 .tarjeta img {
-    height: 180px; /* antes 280px */
+    height: 180px; 
 }
 .riel-tarjetas {
-    gap: 15px; /* antes 30px */
+    gap: 15px; 
 }
 
 .flecha {
@@ -792,7 +811,7 @@ a {
     transform: translateY(-50%);
 }
 .flecha.izquierda {
-    left: 10px; /* antes estaban muy afuera */
+    left: 10px; 
 }
 
 .flecha.derecha {
@@ -807,7 +826,7 @@ a {
 }
 
 .info-tarjeta {
-    padding: 15px; /* antes 25px */
+    padding: 15px; 
 }
 
 .info-tarjeta p {
@@ -827,9 +846,9 @@ a {
 
 
 .cards {
-        display: flex !important; /* Cambiamos de grid a flex para que sea más fácil */
+        display: flex !important; 
         flex-direction: column !important; /* Fuerza la columna única */
-        grid-template-columns: 1fr !important; /* Por si acaso mantuviera el grid */
+        grid-template-columns: 1fr !important; 
         width: 95% !important;
         margin: 20px auto !important;
         padding: 15px !important;
