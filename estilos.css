@@ -9,7 +9,7 @@ html, body {
     width: 100%;
 }
 @font-face {
-    font-family: 'Montserrat'; /* El nombre que vos elijas */
+    font-family: 'Montserrat'; 
     src: url('fuentes/Montserrat-VariableFont_wght.ttf/');}
 
   @font-face {  font-family: "Nunito";
@@ -42,7 +42,7 @@ header {
     top: 0;
     z-index: 1000; 
     
-    /* Centrado logo */
+    /* CentraMOSS el logo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +82,8 @@ color: #F15454;
 
 }
 
+
+
 .hero img {
     height: auto;
     width: 120%;
@@ -105,10 +107,12 @@ color: #F15454;
 .texto-mobile {
     display: none;
     font-weight: 650;
+    font-family: 'Nunito';
 }
 
 .texto-pc {
     font-weight: 650;
+    font-family: 'Nunito';
 }
 
 a {
@@ -124,8 +128,8 @@ a {
 }
 
 .cta {
-    margin-left: 0;   /* Cambiado de 40px a 0 */
-    margin-right: 0;  /* Cambiado de 40px a 0 */
+    margin-left: 0;   
+    margin-right: 0;  
     text-align: left; /* Asegura que el contenido interno se alinee a la izquierda */
     transform: translateY(-40px); 
 }
@@ -140,6 +144,7 @@ a {
 .sub-boton {
     font-size: 24px;
     padding: 0px 0px 50px 0px;
+    font-family: 'Nunito';
   
 }
 
@@ -239,7 +244,9 @@ a {
         font-size: 24px;
     }
 
-
+.card p{
+    font-family: 'Nunito';
+}
 
 
      /*--------------------------------SECCION DE QUE VAMOS A COCINAR ------------------*/
@@ -249,14 +256,14 @@ a {
     }
 
   .contenedor-carrusel {
-        position: relative; /* Clave para mover las flechas */
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        max-width: 1200px; /* Ajusta según tu diseño */
+        max-width: 1200px; 
         margin: 50px auto;
-        padding: 150px 80px; /* Creamos un colchón de espacio para las flechas */
+        padding: 150px 80px; /
     }
 
     .ventana-carrusel {
@@ -284,14 +291,14 @@ a {
         transform: scale(0.8);
     }
 
-    /* La clase que pondrá el JS */
+  
     .tarjeta.activa {
         opacity: 1;
         transform: scale(1.1);
         z-index: 5;
     }
 
-    /* Flechas (Tus estilos de dibujo) */
+    /* Flechas */
     .flecha {
         background-color: #f05454;
         border: none;
@@ -396,10 +403,19 @@ font-weight: 700;
 
     /* --- ESTILO DEL MAPA --- */
     .contenedor-mapa {
-        border: 10px solid #a3d0d9; /* Borde celeste clarito */
+        border: 50px solid #a3d0d9; /* Borde celeste clarito */
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         line-height: 0; /* Quita espacio extra abajo */
     }
+   .contenedor-mapa h3 {
+    position: relative;
+    font-size: 24px;
+    font-family: 'Montserrat';
+    color: #f05454;
+    margin-top: -30px;
+    padding-bottom: 20px; 
+}
+    
 
     .contenedor-mapa iframe {
         width: 500px; /* Ancho en PC */
@@ -528,7 +544,7 @@ font-weight: 700;
     display: flex;
     flex-direction: column; /* Apila los inputs uno abajo del otro */
     gap: 20px; /* Espacio entre campos */
-    max-width: 450px; /* Para que no sean infinitamente largos */
+    max-width: 450px; /* Para que no sean  largos */
 }
 
 .formulario-final input {
@@ -599,14 +615,14 @@ footer{
 .footer-redes img {
     height: 50px; /* Tamaño de los iconos */
     width: auto;
-    filter: brightness(0) invert(1); /* Opcional: pone los logos en blanco si son oscuros */
+    filter: brightness(0) invert(1); 
 }
 .footer-redes img:hover {
     transform: scale(1.2); /* Efecto de agrandado al pasar el mouse */
 }
 
 .boton:hover {
-    background-color: white; /* Un rojo más oscuro */
+    background-color: white;
 color: #a51f1f;
 border: #D22929;
     transform: scale(1.05);    
@@ -614,7 +630,7 @@ border: #D22929;
 }
 
 .boton-enviar:hover {
- background-color: white; /* Un rojo más oscuro */
+ background-color: white; 
 color: #a51f1f;
     box-shadow: 0 5px 15px rgba(210, 41, 41, 0.4); /* Brillo rojo abajo */
 }
@@ -699,15 +715,15 @@ color: #a51f1f;
     header {
         height: 60px; /* más bajito */
         padding: 0 15px;
-        justify-content: flex-start; /* 👈 clave: lo lleva a la izquierda */
+        justify-content: flex-start; /*  lo lleva a la izquierda */
     }
 
     header img {
-        height: 25px; /* achicás el logo */
+        height: 25px; /* achic el logo */
     }
 
     header h1 {
-        font-size: 16px; /* si es texto en vez de img */
+        font-size: 16px;
         letter-spacing: 1px;
     }
 
@@ -937,6 +953,7 @@ a {
     .contenedor-mapa {
         width: 95% !important;
         border-width: 5px !important; /* Borde más fino para el celu */
+        margin-top: 32px;
     }
 
     .contenedor-mapa iframe {
@@ -1143,7 +1160,7 @@ a {
     
 
 footer {
-        padding: 40px 20px !important;
+        padding: 0px 20px !important;
     }
 
   .footer-contenido {
